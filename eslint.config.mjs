@@ -14,6 +14,7 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Standalone CommonJS data-import script (run with `node import.js`).
     "import.js",
+    "enrich.js",
   ]),
 ]);
 

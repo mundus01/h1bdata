@@ -84,14 +84,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
+async function getAISummary(pageKey: string) {
+  const result = await query(
+    `SELECT summary FROM ai_summaries WHERE page_key = $1`,
+    [pageKey]
+  );
+  return result.rows[0]?.summary ?? null;
+}
+
 export default async function CompanyPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const [company, topJobs, topCities, yearlyTrend, recentRecords] = await Promise.all([
+  const [company, topJobs, topCities, yearlyTrend, recentRecords, aiSummary] = await Promise.all([
     getCompanyData(slug),
     getTopJobs(slug),
     getTopCities(slug),
     getYearlyTrend(slug),
     getRecentRecords(slug),
+    getAISummary(`company:${slug}`),
   ]);
 
   if (!company) notFound();
@@ -199,6 +208,18 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </section>
+
+      {aiSummary && (
+        <div className="max-w-6xl mx-auto px-4 pt-6">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">AI Summary</span>
+              <span className="text-xs text-slate-300">· Generated from DOL data</span>
+            </div>
+            <p className="text-slate-700 leading-relaxed">{aiSummary}</p>
+          </div>
+        </div>
+      )}
 
       <div className="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
 

@@ -42,3 +42,4 @@ next-env.d.ts
 raw_data/
 *.csv
 *.xlsx
+enrichment.log
