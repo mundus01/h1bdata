@@ -24,6 +24,7 @@ async function getJobData(slug: string) {
     `, [slug]);
   
     if (result.rows.length === 0) return null;
+    if (parseInt(result.rows[0].total_filings) < 5) return null;
     return result.rows[0];
   }
 
