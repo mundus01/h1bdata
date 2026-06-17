@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/search?*', '/api/'],
     },
-    sitemap: 'https://h1bdata.us/sitemap.xml',
+    sitemap: 'https://www.h1bdata.us/sitemap.xml',
   };
 }

@@ -117,7 +117,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
               "@type": "Dataset",
               "name": `${company.employer_name_clean} H1B Salary Data`,
               "description": `H1B LCA filing data for ${company.employer_name_clean} from the US Department of Labor. ${company.total_filings} filings, median salary $${Math.round(company.median_salary / 1000)}K.`,
-              "url": `https://h1bdata.us/company/${slug}`,
+              "url": `https://www.h1bdata.us/company/${slug}`,
               "creator": { "@type": "Organization", "name": "H1BData.us" },
               "temporalCoverage": `${company.first_year}/${company.last_year}`,
               "spatialCoverage": "United States",
@@ -127,9 +127,9 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://h1bdata.us" },
-                { "@type": "ListItem", "position": 2, "name": "Companies", "item": "https://h1bdata.us/companies" },
-                { "@type": "ListItem", "position": 3, "name": company.employer_name_clean, "item": `https://h1bdata.us/company/${slug}` }
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.h1bdata.us" },
+                { "@type": "ListItem", "position": 2, "name": "Companies", "item": "https://www.h1bdata.us/companies" },
+                { "@type": "ListItem", "position": 3, "name": company.employer_name_clean, "item": `https://www.h1bdata.us/company/${slug}` }
               ]
             },
             {

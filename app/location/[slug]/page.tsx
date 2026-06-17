@@ -102,7 +102,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               "@type": "Dataset",
               "name": `H1B Salary Data in ${location.worksite_city}, ${location.worksite_state}`,
               "description": `H1B salary data for ${location.worksite_city}, ${location.worksite_state}. ${parseInt(location.total_filings).toLocaleString()} filings from ${parseInt(location.total_employers).toLocaleString()} employers. Median salary $${Math.round(location.median_salary / 1000)}K.`,
-              "url": `https://h1bdata.us/location/${slug}`,
+              "url": `https://www.h1bdata.us/location/${slug}`,
               "creator": { "@type": "Organization", "name": "H1BData.us" },
               "spatialCoverage": `${location.worksite_city}, ${location.worksite_state}`
             },
@@ -110,9 +110,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://h1bdata.us" },
-                { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://h1bdata.us/locations" },
-                { "@type": "ListItem", "position": 3, "name": `${location.worksite_city}, ${location.worksite_state}`, "item": `https://h1bdata.us/location/${slug}` }
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.h1bdata.us" },
+                { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://www.h1bdata.us/locations" },
+                { "@type": "ListItem", "position": 3, "name": `${location.worksite_city}, ${location.worksite_state}`, "item": `https://www.h1bdata.us/location/${slug}` }
               ]
             },
             {

@@ -21,14 +21,14 @@ export const metadata: Metadata = {
   },
   description: "Search 7 million H1B salary records from the US Department of Labor. Find H1B salaries by company, job title, and city. Free DOL LCA data 2015–2025.",
   keywords: ["H1B salary", "H1B database", "H1B visa salary", "LCA data", "H1B sponsor"],
-  metadataBase: new URL("https://h1bdata.us"),
+  metadataBase: new URL("https://www.h1bdata.us"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     siteName: "H1BData.us",
-    url: "https://h1bdata.us",
+    url: "https://www.h1bdata.us",
     title: "H1B Salary Database 2025 — Search 7M Records",
     description: "Search 7 million H1B salary records from the US Department of Labor.",
   },
