@@ -165,12 +165,12 @@ export default async function SearchPage({
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="bg-slate-50 border-b border-gray-200">
-                      <th className="sticky top-16 z-10 bg-slate-50 text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-slate-500">Employer</th>
-                      <th className="sticky top-16 z-10 bg-slate-50 text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-slate-500">Job Title</th>
-                      <th className="sticky top-16 z-10 bg-slate-50 text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-slate-500">Location</th>
-                      <th className="sticky top-16 z-10 bg-slate-50 text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-slate-500">Salary</th>
-                      <th className="sticky top-16 z-10 bg-slate-50 text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-slate-500">Level</th>
-                      <th className="sticky top-16 z-10 bg-slate-50 text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-slate-500">Year</th>
+                      <th className="bg-slate-50 text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-slate-500">Employer</th>
+                      <th className="bg-slate-50 text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-slate-500">Job Title</th>
+                      <th className="bg-slate-50 text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-slate-500">Location</th>
+                      <th className="bg-slate-50 text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-slate-500">Salary</th>
+                      <th className="bg-slate-50 text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-slate-500">Level</th>
+                      <th className="bg-slate-50 text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-slate-500">Year</th>
                     </tr>
                   </thead>
                   <tbody>
